@@ -1,6 +1,7 @@
-@import "./reset.scss", "./font.scss";
+@import "./reset.scss", "./font.scss", "./color.scss";
 
 * {
+  font-size: 16px;
   font-family: "spoqa r", "sans-serif";
   box-sizing: border-box;
 }
@@ -13,4 +14,53 @@ body {
 
 button {
   cursor: pointer;
+}
+
+// start
+header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding-right: 1.5em;
+  .guide {
+    color: var(--sub-gray);
+    font-size: 1.25em;
+  }
+}
+
+main {
+  width: 100%;
+  .intro {
+    padding: 0 1.5em;
+    .title {
+      font-size: 1.75em;
+      font-family: "spoqa b", "sans-serif";
+    }
+  }
+  .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em 1.5em;
+    input {
+      width: calc(100% - 75px);
+      padding: 0.7em;
+      border: 0;
+      border-radius: 10px;
+      background-color: var(--sub-gray2);
+    }
+    button {
+      width: 20%;
+      max-width: 70px;
+      margin-left: 5px;
+      padding: 0.7em;
+      border: 0;
+      border-radius: 10px;
+      background-color: var(--sub-gray2);
+      color: var(--sub-gray);
+    }
+  }
 }
